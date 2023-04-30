@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Заказчик
+actor Менеджер
+rectangle Заказ {
+Заказчик — (заказ)
+(заказ) .> (презентация) : включает
+(презентация) .> (оплата) : включает
+(консультация) .> (заказ) : дополняет
+(заказ) — Менеджер
+}
+@enduml
